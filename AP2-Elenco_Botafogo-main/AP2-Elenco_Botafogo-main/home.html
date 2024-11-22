@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atletas Botafogo</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link href="stylehome.css" rel="stylesheet">
+    <script src="codigo.js" defer></script>
+</head>
+<body>
+    <button id="logout">Sair</button>
+    <img src="assets/botafogo.svg" class="escudo">
+    <div id="barraPesquisa">
+        <input type="text" id="campoPesquisa" placeholder="Pesquisar por nome...">
+    </div>
+
+    <div id="filtros">
+        <!-- Select para telas menores -->
+        <select id="selecionaGenero" onchange="carregarDados(this.value)">
+            <option value="all">Todos</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+        </select>
+    
+        <!-- Botões para telas maiores -->
+        <button onclick="carregarDados('masculino')">Masculino</button>
+        <button onclick="carregarDados('feminino')">Feminino</button>
+        <button onclick="carregarDados('all')">Todos</button>
+    </div>
+    
+
+    <div id="container">
+        <!-- O conteúdo dos cards será carregado aqui -->
+    </div>
+</body>
+</html>
